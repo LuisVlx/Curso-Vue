@@ -1,6 +1,7 @@
 <template>
     <div class="pokemon-container">
         <img
+            v-if="!showPokemon"
             class="hidden-pokemon"
             :src="imgSrc"
             alt="pokemon"
@@ -8,7 +9,7 @@
             data-aos-duration="800"
         >
         <img
-            v-if="showPokemon"
+            v-else
             data-aos="zoom-out"
             :src="imgSrc"
             alt="pokemon"
